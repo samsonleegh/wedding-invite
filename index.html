@@ -492,10 +492,29 @@
             background: #fff;
         }
 
-        .radio-option input:checked + label {
-            border-color: var(--gold);
-            background: rgba(201,169,110,0.08);
-            color: var(--gold);
+        .radio-option.yes label {
+            border-color: rgba(168,181,162,0.5);
+            background: rgba(168,181,162,0.08);
+            color: #8a9d82;
+        }
+
+        .radio-option.yes input:checked + label {
+            border-color: var(--sage);
+            background: rgba(168,181,162,0.25);
+            color: #4a5d42;
+            font-weight: 600;
+        }
+
+        .radio-option.no label {
+            border-color: rgba(212,160,160,0.5);
+            background: rgba(212,160,160,0.08);
+            color: #c09090;
+        }
+
+        .radio-option.no input:checked + label {
+            border-color: #d4a0a0;
+            background: rgba(212,160,160,0.22);
+            color: #904a4a;
             font-weight: 600;
         }
 
@@ -728,11 +747,11 @@
             <div class="form-group">
                 <label>Attending?</label>
                 <div class="radio-group">
-                    <div class="radio-option">
+                    <div class="radio-option yes">
                         <input type="radio" id="attendYes" name="attending" value="yes" required>
                         <label for="attendYes">Wouldn't miss it! 出席!</label>
                     </div>
-                    <div class="radio-option">
+                    <div class="radio-option no">
                         <input type="radio" id="attendNo" name="attending" value="no">
                         <label for="attendNo">Can't make it 无法出席</label>
                     </div>
